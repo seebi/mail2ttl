@@ -6,6 +6,9 @@
   "scripts": {
     "test": "node generateMail.js && ./bin/mail2ttl mail.file && rm -rf mail.file"
   },
+  "bin": {
+    "mail2ttl": "./bin/mail2ttl"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/leipert/mail2ttl.git"
