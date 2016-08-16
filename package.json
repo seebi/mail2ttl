@@ -1,0 +1,33 @@
+{
+  "name": "mail2ttl",
+  "version": "0.1.0",
+  "description": "mail2ttl is a cli which parses a maildir mail and prints it as turtle",
+  "main": "index.js",
+  "scripts": {
+    "test": "node generateMail.js && ./bin/mail2ttl mail.file && rm -rf mail.file"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leipert/mail2ttl.git"
+  },
+  "keywords": [
+    "maildir",
+    "turtle",
+    "ttl",
+    "cli",
+    "parser",
+    "semantic",
+    "web",
+    "rdf"
+  ],
+  "author": "Lukas Eipert <git@leipert.io> (https://leipert.io/)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/leipert/mail2ttl/issues"
+  },
+  "homepage": "https://github.com/leipert/mail2ttl#readme",
+  "dependencies": {
+    "command-line-args": "^3.0.1",
+    "mailparser": "^0.6.1"
+  }
+}

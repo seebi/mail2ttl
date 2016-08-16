@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+var fs = require('fs');
+var path = require('path');
+
+function FileDetails(filename){
+
+    if (!(this instanceof FileDetails)) return new FileDetails(filename)
+
+
+    this.filename = path.join(process.cwd(), filename);;
+    this.exists = fs.existsSync(this.filename);
+}
+
+var commandLineArgs = require('command-line-args');
+
+var optionDefinitions = [
+    { name: 'src', type: FileDetails, multiple: false, defaultOption: true },
+];
+
+var options = commandLineArgs(optionDefinitions);
+
+if(options.src.exists){
+    require('../index')(options.src.filename);
+}else {
+    throw new Error(options.src.filename + ' does not exist');
+}
+
