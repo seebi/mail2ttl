@@ -31,6 +31,16 @@
   "homepage": "https://github.com/leipert/mail2ttl#readme",
   "dependencies": {
     "command-line-args": "^3.0.1",
-    "mailparser": "^0.6.1"
+    "mailparser": "^0.6.1",
+    "n3": "^0.5.0"
+  },
+  "eslintConfig": {
+    "env": {
+        "node": true
+    },
+    "rules": {
+        "quotes": [1, "single"],
+        "new-cap": false
+    }
   }
 }
